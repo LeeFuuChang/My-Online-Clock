@@ -1,0 +1,122 @@
+/* background */
+.background {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1000;
+    background-attachment: fixed;
+}
+
+
+
+
+
+/* Day */
+.day-background {
+    transition-duration: 1s;
+}
+.day .day-background {
+    opacity: 1;
+}
+.day .night-background {
+    background: linear-gradient(#111425, #3751e0);
+    opacity: 0;
+}
+
+
+
+/* Day BG elements */
+.day .day-background .sun {
+    position: absolute;
+    border-radius: 50%;
+    bottom: 8%;
+    width: 480px;
+    height: 480px;
+    box-shadow: 0 0 100px rgba(248,200,95,1), 0 0 200px rgba(248,200,95,1), 0 0 400px rgba(248,200,95,1), 0 0 800px rgba(248,200,95,1);
+    background: radial-gradient(#e6e559 3%,#e2e24e 5%,#e1df4e 7%, #e1d34e 10%,#e9c76d);
+    filter: blur(10px);
+}
+
+
+
+
+/* Night */
+.night-background {
+    transition-duration: 0.5s;
+}
+.night .day-background {
+    opacity: 0;
+}
+.night .night-background {
+    background: linear-gradient(#111425, #3751e0);
+    opacity: 1;
+}
+
+
+
+/* Night BG elements */
+.night .night-background .moon {
+    position: absolute;
+    border-radius: 50%;
+    top: 8%;
+    left: 16%;
+    width: 160px;
+    height: 160px;
+    z-index: -750;
+    background: #ffffff;
+}
+.night .night-background .moon::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: -16%;
+    left: 16%;
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(#111425, #3751e0);
+    background-attachment: fixed;
+}
+
+
+
+.night .night-background .forest {
+    position: absolute;
+    height: auto;
+    max-height: 100%;
+    bottom: 50%;
+    z-index: -250;
+    transition: 3s;
+}
+.day .night-background .forest {
+    opacity: 0;
+}
+
+
+
+.night .night-background i {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -500;
+    background: #ffffff;
+    animation: star_move 30s linear infinite;
+}
+@keyframes star_move {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}

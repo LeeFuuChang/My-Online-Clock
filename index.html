@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/globals.css">
+
+    <title>MyClock</title>
+</head>
+<body class="day">
+    <div class="night-background background">
+        <div class="moon"></div>
+        <img src="assets/images/bg/forest.png" alt="">
+    </div>
+    <div class="day-background background">
+        <div class="sun"></div>
+        <img src="assets/images/bg/day.jpg" alt="">
+    </div>
+
+    <div id="elements" class="elements">
+        <div class="content">
+            <div class="timer">
+                <h1 class="time">
+                    <span id="h1">2</span>
+                    <span id="h2">3</span>
+                    <span id="sy">:</span>
+                    <span id="m1">0</span>
+                    <span id="m2">0</span>
+                </h1>
+                <div class="adjust">
+                    <div id="btn-h" class="btn-group">
+                        <div id="btn-hu" class="btn-u adjust-btn"></div>
+                        <div id="btn-hd" class="btn-d adjust-btn"></div>
+                    </div>
+                    <div id="btn-m" class="btn-group">
+                        <div id="btn-mu" class="btn-u adjust-btn"></div>
+                        <div id="btn-md" class="btn-d adjust-btn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="audios">
+                <audio id="audio-electronic" src="assets/audio/electronic.mp3" preload="auto" loop></audio>
+            </div>
+
+            <div id="btnset" class="btnset"><span><b>Set</b></span></div>
+
+            <div class="content-footer">
+                <div class="attribution">
+                    <a href="https://www.leefuuchang.in">LeeFuuChang</a>
+                </div>
+                <div class="info">
+                    <i class="fas fa-question-circle">
+                        <div class="info-inner">
+                            <p class="info-inner-description">After set, the alarm clock will still work even if the internet disconnected.</p>
+                            <p class="info-inner-copyright">Copyright LeeFuuChang ©2022.</p>
+                        </div>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/7dd397c9c6.js" crossorigin="anonymous"></script>
+<script src="assets/js/alarm.js"></script>
+<script src="assets/js/timer.js"></script>
+</html>
